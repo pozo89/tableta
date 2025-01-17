@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización de Archivos</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background: #020230;
+        }
+        .content {
+            flex: 1;
+            border-top: 2px solid #ddd;
+        }
+        .boton-mapas {
+            background: linear-gradient(to bottom, #4A90E2, #357ABD);
+            border: none;
+            color: white;
+            padding: 5px 44px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 8px 4px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px #2A5A8A;
+            transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+        .boton-mapas:hover {
+            background: linear-gradient(to bottom, #ff3c00ea, #ff3c00ea); /* Color Mandarina */
+        }
+        .boton-mapas:active {
+            box-shadow: 0 2px #2A5A8A;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="boton-mapas" onclick="loadFile('Clientes')">Clientes</button>
+            <button class="boton-mapas" onclick="loadFile('Planes')">Planes</button>
+            <button class="boton-mapas" onclick="loadFile('Vehiculos')">Vehiculos</button>
+            <button class="boton-mapas" onclick="loadFile('Archivo7')">Archivo 7</button>
+            <button class="boton-mapas" onclick="loadFile('Archivo8')">Archivo 8</button>
+            <button class="boton-mapas" onclick="loadFile('Archivo9')">Archivo 9</button>
+            <button class="boton-mapas" onclick="loadFile('Archivo10')">Archivo 10</button>
+        </div>
+        <div class="content" id="content">
+            <iframe id="fileViewer" style="width: 100%; height: 100%;" src=""></iframe>
+        </div>
+    </div>
+    <script>
+        function loadFile(fileName) {
+            document.getElementById('fileViewer').src = fileName + '.html'; // Cambiar la extensión según el tipo de archivo
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Fondo Azul Fuerte</title>
+    <style>
+        body {
+            background-color: #020230; /* Azul fuerte */
+            color: white; /* Texto blanco para contraste */
+        }
+    </style>
+</head>
+<body>
+    <h1>Página con Fondo Azul Fuerte</h1>
+    <p>Este es un texto de ejemplo.</p>
+</body>
+</html>
+
